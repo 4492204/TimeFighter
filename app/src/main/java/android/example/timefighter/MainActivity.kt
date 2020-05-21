@@ -125,6 +125,10 @@ class MainActivity : AppCompatActivity() {
        score += 1
         val newScore= getString(R.string.yourScore, score)
         gameScoreTextView.text = newScore
+
+        val blinkAnimation = AnimationUtils.loadAnimation(this, R.anim.blink)
+        gameScoreTextView.startAnimation(blinkAnimation)
+
     }
     private fun startGame() {
         countDownTimer.start()
